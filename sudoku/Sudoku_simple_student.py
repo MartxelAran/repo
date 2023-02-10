@@ -82,7 +82,6 @@ def eliminate(values):
     """
 
 
-
 # 2 Only_choice: aukera bakarra dauzkaten gelaxkak, gure sudokuko hiztegian sartu
 
 def only_choice(values):
@@ -117,6 +116,7 @@ def reduce_puzzle(values):
     Input: A sudoku in dictionary form.
     Output: The resulting sudoku in dictionary form.
     """
+    return unitlist
 
 
 def solve(grid):
@@ -130,11 +130,14 @@ def solve(grid):
     """
     puzzle = grid_values(grid)
     # solve the puzzle
-    values = reduce_puzzle(puzzle)
+    # values = reduce_puzzle(puzzle)
+    """
     if all(len(values[s]) == 1 for s in boxes):
         return values  # Solved!
     else:
         return False
+    """
+    return puzzle
 
 
 # Sudokua erakutsiko digu, taula gisa
